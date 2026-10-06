@@ -1,0 +1,6 @@
+{
+  "name": "Gilgit Portal",
+  "description": "Civic transparency, infrastructure tracking, local economy, and citizen services portal for Gilgit-Baltistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -19,7 +19,7 @@ export const ProjectsScreen: React.FC<ProjectsScreenProps> = ({
   });
 
   return (
-    <div className="flex flex-col w-full max-w-2xl mx-auto px-4 pb-12 gap-4">
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 gap-4">
       {/* Civic Overview & Progress Pulse Banner */}
       <div className="w-full bg-surface-container-low rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col gap-2 border border-surface-container">
         <div className="flex items-center justify-between">

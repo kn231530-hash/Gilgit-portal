@@ -89,12 +89,13 @@ function PortalApp() {
       {/* Fixed Header */}
       <Header
         currentTab={currentTab}
+        onChangeTab={setCurrentTab}
         onOpenNotifications={() => setIsNotificationsOpen(true)}
         onOpenProfile={() => setIsProfileOpen(true)}
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 w-full pt-20 pb-20 bg-surface min-h-screen">
+      <main className="min-h-screen w-full flex-1 bg-slate-50 pb-24 pt-24 lg:pb-12 lg:pt-24">
         {currentTab === 'overview' && (
           <OverviewScreen
             onNavigateTab={(tab) => setCurrentTab(tab)}

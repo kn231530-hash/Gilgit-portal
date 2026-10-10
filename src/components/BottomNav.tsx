@@ -32,11 +32,11 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentTab, onChangeTab })
 
   return (
     <nav
-      className="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,67,40,0.06)] border-t border-surface-container"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 pb-safe shadow-[0_-4px_24px_rgba(15,23,42,0.05)] backdrop-blur-xl lg:hidden"
       role="navigation"
       aria-label="Main Navigation"
     >
-      <div className="flex justify-around items-center h-16 px-1 max-w-2xl mx-auto">
+      <div className="mx-auto flex h-16 max-w-2xl items-center justify-around px-1">
         {tabs.map((tab) => {
           const isActive = currentTab === tab.id;
           return (

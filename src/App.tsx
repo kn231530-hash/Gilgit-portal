@@ -3,6 +3,7 @@ import { TabType, ProjectItem, NoticeItem } from './types';
 import { PROJECTS_DATA, NOTICES_DATA } from './data/portalData';
 import { Header } from './components/Header';
 import { BottomNav } from './components/BottomNav';
+import { AdminPanel } from './components/AdminPanel';
 import { OverviewScreen } from './components/OverviewScreen';
 import { ProjectsScreen } from './components/ProjectsScreen';
 import { EconomyScreen } from './components/EconomyScreen';
@@ -19,7 +20,7 @@ import {
   ProfileModal,
 } from './components/Modals';
 
-export default function App() {
+function PortalApp() {
   const [currentTab, setCurrentTab] = useState<TabType>('overview');
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [selectedNotice, setSelectedNotice] = useState<NoticeItem | null>(null);
@@ -286,4 +287,12 @@ export default function App() {
       )}
     </div>
   );
+}
+
+
+export default function App() {
+  if (window.location.pathname.replace(/\\/+$/, '') === '/admin') {
+    return <AdminPanel />;
+  }
+  return <PortalApp />;
 }

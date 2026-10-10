@@ -44,10 +44,10 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
   ];
 
   return (
-    <div className="flex flex-col w-full max-w-2xl mx-auto pb-10">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-1 pb-10 sm:px-2">
       {/* Alpine Karakoram Hero Greeting & Regional Vitality Strip */}
-      <section className="relative w-full px-4 pt-4 pb-2">
-        <div className="relative w-full overflow-hidden rounded-xl bg-primary text-on-primary shadow-md border border-primary-container">
+      <section className="relative w-full px-3 pb-3 pt-2 sm:px-5 lg:px-8">
+        <div className="relative w-full overflow-hidden rounded-2xl border border-emerald-900 bg-emerald-950 text-white shadow-xl sm:rounded-3xl">
           {/* Atmospheric Backdrop Image */}
           <div
             className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-30 pointer-events-none"
@@ -55,7 +55,7 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
           />
 
           {/* Scrim overlay for contrast */}
-          <div className="relative z-10 flex flex-col p-4 gap-4">
+          <div className="relative z-10 flex min-h-[300px] flex-col justify-center gap-6 p-6 sm:min-h-[360px] sm:p-10 lg:p-14">
             {/* Top Status Bar: Karakoram Weather & Highway Live State */}
             <div className="flex items-center justify-between gap-2 flex-wrap">
               <button
@@ -84,10 +84,10 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
                   Roof of the World • Gilgit-Baltistan Civic Desk
                 </span>
               </div>
-              <h1 className="font-headline-lg-mobile text-on-primary leading-tight font-bold text-xl">
+              <h1 className="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Welcome to Gilgit Portal
               </h1>
-              <p className="font-body-sm text-primary-fixed-dim max-w-sm text-white/90 leading-relaxed text-[13px]">
+              <p className="max-w-2xl text-sm leading-7 text-emerald-50/90 sm:text-base">
                 Comprehensive transparency platform for northern infrastructure development, road networks, clean water, and economic growth.
               </p>
             </div>
@@ -121,12 +121,12 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
       </section>
 
       {/* Quick Regional Metrics (2x2 Compact Grid) */}
-      <section className="w-full px-4 py-2">
-        <div className="grid grid-cols-2 gap-3">
+      <section className="w-full px-3 py-3 sm:px-5 lg:px-8">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 lg:gap-4">
           {/* Metric 1: Active Projects */}
           <div
             onClick={() => onNavigateTab('development-projects')}
-            className="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container hover:border-secondary transition-all cursor-pointer active:scale-[0.98]"
+            className="flex cursor-pointer flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-emerald-700 hover:shadow-md active:scale-[0.98] sm:p-5"
           >
             <div className="flex items-center justify-between mb-2">
               <div className="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
@@ -151,7 +151,7 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
           {/* Metric 2: Hydro Power Generation */}
           <div
             onClick={() => onNavigateTab('development-projects')}
-            className="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container hover:border-tertiary transition-all cursor-pointer active:scale-[0.98]"
+            className="flex cursor-pointer flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-sky-700 hover:shadow-md active:scale-[0.98] sm:p-5"
           >
             <div className="flex items-center justify-between mb-2">
               <div className="w-9 h-9 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
@@ -201,7 +201,7 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
           {/* Metric 4: Agriculture & Farm Subsidy */}
           <div
             onClick={() => onNavigateTab('economy-and-agriculture')}
-            className="flex flex-col p-4 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container hover:border-primary transition-all cursor-pointer active:scale-[0.98]"
+            className="flex cursor-pointer flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-emerald-700 hover:shadow-md active:scale-[0.98] sm:p-5"
           >
             <div className="flex items-center justify-between mb-2">
               <div className="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
@@ -227,7 +227,7 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
 
       {/* Live Highlighted Project Tracker Card */}
       <section className="w-full px-4 py-2">
-        <div className="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm border border-surface-container">
+        <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:rounded-3xl sm:p-7">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-secondary" />
@@ -305,11 +305,11 @@ export const OverviewScreen: React.FC<OverviewScreenProps> = ({
           </span>
         </div>
 
-        <div className="grid grid-cols-1 gap-2">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {/* Sector 1 */}
           <div
             onClick={() => onNavigateTab('development-projects')}
-            className="flex items-center gap-3 p-3 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container hover:shadow-md transition-all cursor-pointer active:scale-[0.99]"
+            className="flex cursor-pointer items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:border-emerald-700 hover:shadow-md active:scale-[0.99]"
           >
             <div className="w-13 h-13 shrink-0 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
               <span className="material-symbols-outlined text-[26px]">add_road</span>

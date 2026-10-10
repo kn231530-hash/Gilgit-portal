@@ -3,6 +3,30 @@
     {
       "source": "/admin",
       "destination": "/index.html"
+    },
+    {
+      "source": "/ai-agents",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/solutions",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/process",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
     }
   ]
 }

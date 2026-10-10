@@ -115,7 +115,7 @@ export function AdminPanel() {
 
   if (!isSupabaseConfigured) return (
     <div className="min-h-screen bg-slate-50 p-5 sm:p-10"><div className="mx-auto max-w-xl rounded-3xl border bg-white p-7 shadow-sm">
-      <Database className="mb-4 text-emerald-800" size={32} /><h1 className="text-2xl font-bold text-slate-900">Connect Gilgit Portal Database</h1>
+      <Database className="mb-4 text-emerald-800" size={32} /><h1 className="text-2xl font-bold text-slate-900">Connect Orken AI Database</h1>
       <p className="mt-2 text-sm leading-6 text-slate-600">Add the two Supabase environment variables to your local .env file and Vercel project settings to activate admin login.</p>
       <pre className="mt-4 overflow-auto rounded-xl bg-slate-950 p-4 text-xs text-emerald-100">VITE_SUPABASE_URL=https://YOUR_PROJECT.supabase.co{"\n"}VITE_SUPABASE_PUBLISHABLE_KEY=your_publishable_key</pre>
       <a className="mt-5 inline-flex text-sm font-semibold text-emerald-800 underline" href="https://supabase.com/dashboard">Open Supabase dashboard</a>
@@ -126,7 +126,7 @@ export function AdminPanel() {
   if (!user) return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-950 p-5 sm:p-10">
       <div className="mx-auto grid min-h-[80vh] max-w-4xl items-center gap-8 md:grid-cols-2">
-        <div className="text-white"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10"><ShieldCheck size={30}/></div><p className="text-xs font-bold uppercase tracking-[.25em] text-emerald-200">Gilgit Portal</p><h1 className="mt-3 text-4xl font-bold tracking-tight">Admin dashboard</h1><p className="mt-4 max-w-md leading-7 text-emerald-100/80">Manage development projects and public notices in one secure place.</p><button onClick={() => { window.location.href = "/"; }} className="mt-8 inline-flex items-center gap-2 text-sm text-emerald-100 hover:text-white"><ArrowLeft size={16}/> Back to website</button></div>
+        <div className="text-white"><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10"><ShieldCheck size={30}/></div><p className="text-xs font-bold uppercase tracking-[.25em] text-emerald-200">Orken AI</p><h1 className="mt-3 text-4xl font-bold tracking-tight">Admin dashboard</h1><p className="mt-4 max-w-md leading-7 text-emerald-100/80">Manage AI projects and published updates in one secure place.</p><button onClick={() => { window.location.href = "/"; }} className="mt-8 inline-flex items-center gap-2 text-sm text-emerald-100 hover:text-white"><ArrowLeft size={16}/> Back to website</button></div>
         <form onSubmit={signIn} className="rounded-3xl bg-white p-6 shadow-2xl sm:p-8"><h2 className="text-xl font-bold text-slate-900">Administrator sign in</h2><p className="mb-6 mt-1 text-sm text-slate-500">Use the admin account created in Supabase Auth.</p>
           <label className="mb-1 block text-sm font-medium text-slate-700">Email</label><input className={inputClass} type="email" autoComplete="username" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="admin@example.com"/>
           <label className="mb-1 mt-4 block text-sm font-medium text-slate-700">Password</label><input className={inputClass} type="password" autoComplete="current-password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Your password"/>
@@ -148,7 +148,7 @@ export function AdminPanel() {
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-center gap-3">
               <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-emerald-900 text-white"><ShieldCheck size={23}/></div>
-              <div><p className="text-xs font-bold uppercase tracking-[.18em] text-emerald-800">Gilgit Portal</p><h1 className="mt-0.5 text-2xl font-bold tracking-tight text-slate-900">{tab==="overview"?"Dashboard":tab==="projects"?"Development Projects":tab==="notices"?"Public Notices":"Settings & Account"}</h1><p className="mt-1 text-xs text-slate-500">Admin control center</p></div>
+              <div><p className="text-xs font-bold uppercase tracking-[.18em] text-emerald-800">Orken AI</p><h1 className="mt-0.5 text-2xl font-bold tracking-tight text-slate-900">{tab==="overview"?"Dashboard":tab==="projects"?"AI Projects":tab==="notices"?"Updates & Notices":"Settings & Account"}</h1><p className="mt-1 text-xs text-slate-500">Admin control center</p></div>
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <span className="hidden max-w-[220px] truncate text-sm text-slate-500 sm:inline">{user.email}</span>
@@ -182,7 +182,7 @@ export function AdminPanel() {
             <a href="https://supabase.com/dashboard" target="_blank" rel="noreferrer" className="mt-4 inline-flex text-sm font-semibold text-emerald-800 underline">Open Supabase dashboard ↗</a>
           </section>
         </div>}
-        <footer className="mt-10 border-t pt-5 text-xs text-slate-400">Gilgit Portal Admin · Protected by Supabase Auth and database row-level security.</footer>
+        <footer className="mt-10 border-t pt-5 text-xs text-slate-400">Orken AI Admin · Protected by Supabase Auth and database row-level security.</footer>
       </main>
     </div>
   );

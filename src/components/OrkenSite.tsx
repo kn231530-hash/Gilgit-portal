@@ -61,9 +61,23 @@ function ContactCTA() {
 
 function HomePage() {
   return <>
-    <section className="relative overflow-hidden px-4 pb-20 pt-14 sm:px-6 sm:pt-20 lg:px-8 lg:pb-28 lg:pt-24"><div className="pointer-events-none absolute -right-40 top-0 h-[600px] w-[600px] rounded-full bg-lime-300/[0.055] blur-[100px]"/><div className="relative mx-auto max-w-7xl"><Eyebrow>Gilgit-Baltistan · Local information</Eyebrow><h1 className="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-.045em] text-white sm:text-5xl lg:text-6xl xl:text-[68px]">Welcome to <span className="text-lime-300">Gilgit Portal.</span></h1><p className="mt-6 max-w-xl text-base leading-7 text-slate-400 sm:text-lg sm:leading-8">Your digital gateway to local information, public updates, tourism, and services across Gilgit-Baltistan.</p><div className="mt-8 flex flex-wrap gap-3"><ButtonLink href="/contact">Contact us <ArrowUpRight size={17}/></ButtonLink><ButtonLink href="/about" secondary>About Gilgit Portal <ArrowRight size={16}/></ButtonLink></div></div></section>
-    <section className="border-y border-white/[0.07] bg-white/[0.018]" px-4 py-7 sm:px-6 lg:px-8"><div className="mx-auto flex max-w-7xl flex-col items-start gap-5 lg:flex-row lg:items-center lg:justify-between"><p className="shrink-0 text-[10px] font-bold uppercase tracking-[.2em] text-slate-500">Works with your existing stack</p><div className="flex flex-wrap gap-2">{tech.map(t=><span key={t} className="rounded-full border border-white/[0.09] px-3.5 py-2 text-xs font-medium text-slate-300">{t}</span>)}</div></div></section>
- px-4 py-20 sm:px-6 lg:px-8 lg:py-24"><div className="mx-auto max-w-7xl"><div className="mb-10 max-w-2xl"><Eyebrow>How we work</Eyebrow><h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">From first workflow to production.</h2><p className="mt-4 text-sm leading-7 text-slate-400 sm:text-base">A practical process designed to get the system working, tested, and observable.</p></div><ProcessSection/></div></section>
+    <section className="relative overflow-hidden px-4 pb-20 pt-14 sm:px-6 sm:pt-20 lg:px-8 lg:pb-28 lg:pt-24">
+      <div className="pointer-events-none absolute -right-40 top-0 h-[600px] w-[600px] rounded-full bg-lime-300/[0.055] blur-[100px]"/>
+      <div className="relative mx-auto max-w-7xl">
+        <Eyebrow>Gilgit-Baltistan · Local information</Eyebrow>
+        <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-.045em] text-white sm:text-5xl lg:text-6xl xl:text-[68px]">Welcome to <span className="text-lime-300">Gilgit Portal.</span></h1>
+        <p className="mt-6 max-w-xl text-base leading-7 text-slate-400 sm:text-lg sm:leading-8">Your digital gateway to local information, public updates, tourism, and services across Gilgit-Baltistan.</p>
+        <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href="/contact">Contact us <ArrowUpRight size={17}/></ButtonLink><ButtonLink href="/about" secondary>About Gilgit Portal <ArrowRight size={16}/></ButtonLink></div>
+      </div>
+    </section>
+    <section className="border-y border-white/[0.07] bg-white/[0.018] px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[{title:'Local information',text:'Find useful information and updates for Gilgit-Baltistan.'},{title:'Tourism & places',text:'Discover the region, its communities, and places to visit.'},{title:'Public updates',text:'Keep up with notices, announcements, and local developments.'}].map(item=><article key={item.title} className="rounded-3xl border border-white/10 bg-white/[0.025] p-6"><h2 className="text-lg font-bold text-white">{item.title}</h2><p className="mt-3 text-sm leading-6 text-slate-400">{item.text}</p></article>)}
+      </div>
+    </section>
+    <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl"><Eyebrow>About the portal</Eyebrow><h2 className="max-w-2xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl">One place to explore Gilgit-Baltistan.</h2><p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">Gilgit Portal brings local information, community updates, tourism, and public resources together in a clear, accessible experience.</p></div>
+    </section>
     <ContactCTA/>
   </>;
 }

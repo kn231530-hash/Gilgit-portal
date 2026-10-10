@@ -33,7 +33,7 @@ export const TourismScreen: React.FC<TourismScreenProps> = ({
   };
 
   return (
-    <div className="flex flex-col w-full max-w-2xl mx-auto px-4 pb-12 gap-5">
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 gap-5">
       {/* Alpine Weather & Critical Route Advisory Header Card */}
       <div className="relative w-full overflow-hidden rounded-xl bg-gradient-to-br from-tertiary via-tertiary-container to-primary-container text-on-tertiary p-4 shadow-md border border-tertiary-container">
         {/* Mountain Background Graphic Texture */}

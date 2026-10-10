@@ -15,7 +15,7 @@ export const EconomyScreen: React.FC<EconomyScreenProps> = ({
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'agri' | 'gems' | 'crafts'>('all');
 
   return (
-    <div className="flex flex-col w-full max-w-2xl mx-auto px-4 pb-12 gap-5">
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 gap-5">
       {/* Interactive Live Ticker Strip: Mandi Wholesale Rates */}
       <section className="w-full bg-surface-container-high rounded-xl p-3 flex flex-col gap-2 shadow-sm border border-surface-container">
         <div className="flex items-center justify-between">

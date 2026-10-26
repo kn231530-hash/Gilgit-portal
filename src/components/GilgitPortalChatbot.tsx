@@ -50,7 +50,7 @@ export function GilgitPortalChatbot() {
   }
 
   return (
-    <div className="fixed bottom-20 right-4 z-[100] sm:bottom-6 sm:right-6">
+    <div style={{ position: "fixed", right: "max(16px, env(safe-area-inset-right))", bottom: "max(16px, env(safe-area-inset-bottom))", zIndex: 99999, isolation: "isolate" }} className="sm:bottom-6 sm:right-6">
       {open && (
         <section role="dialog" aria-label="Gilgit Portal AI chat" className="mb-3 flex h-[min(600px,calc(100dvh-150px))] w-[min(390px,calc(100vw-32px))] flex-col overflow-hidden rounded-3xl border border-emerald-900/10 bg-white shadow-2xl">
           <header className="flex items-center gap-3 bg-gradient-to-r from-emerald-950 to-emerald-800 px-4 py-4 text-white">
@@ -73,7 +73,7 @@ export function GilgitPortalChatbot() {
           <p className="bg-white px-3 pb-3 text-center text-[10px] text-slate-400">AI answers may be inaccurate.</p>
         </section>
       )}
-      <button type="button" onClick={() => setOpen((v) => !v)} aria-label={open ? "Close Gilgit Portal AI" : "Open Gilgit Portal AI"} className="ml-auto flex items-center gap-2 rounded-full bg-emerald-900 px-4 py-3.5 text-sm font-semibold text-white shadow-xl transition hover:bg-emerald-800">{open ? <X size={20} /> : <Sparkles size={20} />}<span>{open ? "Close chat" : "Ask Gilgit AI"}</span></button>
+      <button type="button" onClick={() => setOpen((v) => !v)} aria-label={open ? "Close Gilgit Portal AI" : "Open Gilgit Portal AI"} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, minHeight: 52, padding: "14px 18px", border: 0, borderRadius: 9999, background: "#064e3b", color: "#ffffff", fontSize: 14, fontWeight: 700, boxShadow: "0 8px 28px rgba(0,0,0,.24)", cursor: "pointer" }} className="ml-auto transition hover:bg-emerald-800">{open ? <X size={20} /> : <Sparkles size={20} />}<span>{open ? "Close chat" : "Ask Gilgit AI"}</span></button>
     </div>
   );
 }
